@@ -16,5 +16,4 @@ class DonghuaSpider(scrapy.Spider):
                 'link': i['link'],
                 'score': i['score']
             }
-            print(donghua)
-
+            yield donghua

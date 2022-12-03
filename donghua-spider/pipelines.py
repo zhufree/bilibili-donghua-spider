@@ -19,6 +19,10 @@ class DonghuaPipeline:
         self.worksheet.write(0,1, "简介")
         self.worksheet.write(0,2, "链接")
         self.worksheet.write(0,3, "评分")
+        self.worksheet.write(0,4, "观看数")
+        self.worksheet.write(0,5, "追番数")
+        self.worksheet.write(0,6, "投币数")
+        self.worksheet.write(0,7, "弹幕数")
         self.row = 1
 
     def process_item(self, item, spider):
@@ -30,6 +34,10 @@ class DonghuaPipeline:
         self.worksheet.write(self.row, 1, item['subTitle'])
         self.worksheet.write(self.row, 2, item['link'])
         self.worksheet.write(self.row, 3, item['score'])
+        self.worksheet.write(self.row, 4, item['views'])
+        self.worksheet.write(self.row, 5, item['follow'])
+        self.worksheet.write(self.row, 6, item['coins'])
+        self.worksheet.write(self.row, 7, item['danmakus'])
         self.row += 1
         return item
 
